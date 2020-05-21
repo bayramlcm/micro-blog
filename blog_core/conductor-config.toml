@@ -12,7 +12,7 @@ test_agent = true
 
 [[dnas]]
 file = '/Users/bayramlcm/Documents/projects/blockchain/holochain/micro-blog/blog_core/dist/blog_core.dna.json'
-hash = 'QmRzGvLfJ39WhymNMPgssQX3Tb4kYSqauV1f3DXRWnEgG8'
+hash = 'QmSzWiutJ5adcDMiY6m9j7UoM8GXjbi26ZwvA4hitRARUy'
 id = 'hc-run-dna'
 
 [[instances]]
