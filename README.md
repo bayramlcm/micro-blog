@@ -25,12 +25,6 @@ $ cd blog_core
 $ hc package
 ```
 
-### Test
-
-``` console
-$ hc test
-```
-
 ### Uygulamayı başlatma
 
 ``` console
