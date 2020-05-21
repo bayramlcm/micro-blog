@@ -1,0 +1,16 @@
+bridges = []
+
+[[instances]]
+name = "blog_core"
+id = "__blog_core"
+dna_hash = "QmQB4dDn7ShJaDEg1UGb3AYypTLSN5RX18sKf2vRUBrHRE"
+uri = "file:dist/blog_core.dna.json" 
+
+[[UIs]]
+name = "CC Tuts"
+id = "blog_core_ui"
+uri = "dir:../blog_gui" 
+
+[[UIs.instance_references]]
+ui_handle = "test-instance"
+instance_id = "__blog_core"

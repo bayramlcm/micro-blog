@@ -21,7 +21,7 @@ mod hello_zome {
 
     #[zome_fn("hc_public")]
     pub fn hello_holo() -> ZomeApiResult<String> {
-        Ok("Hello Holo".into())
+        Ok("Merhaba Holo".into())
     }
     #[entry_def]
     fn post_entry_def() -> ValidatingEntryType {

@@ -1,7 +1,5 @@
 bridges = []
 persistence_dir = ''
-ui_bundles = []
-ui_interfaces = []
 
 [[agents]]
 id = 'hc-run-agent'
@@ -11,28 +9,42 @@ public_address = 'HcScjN8wBwrn3tuyg89aab3a69xsIgdzmX5P9537BqQZ5A7TEZu7qCY4Xzzjhm
 test_agent = true
 
 [[dnas]]
-file = '/Users/bayramlcm/Documents/projects/blockchain/holochain/micro-blog/blog_core/dist/blog_core.dna.json'
-hash = 'QmSzWiutJ5adcDMiY6m9j7UoM8GXjbi26ZwvA4hitRARUy'
-id = 'hc-run-dna'
+file = 'dist/blog_core.dna.json'
+hash = 'QmQB4dDn7ShJaDEg1UGb3AYypTLSN5RX18sKf2vRUBrHRE'
+id = '__blog_core'
 
 [[instances]]
 agent = 'hc-run-agent'
-dna = 'hc-run-dna'
-id = 'test-instance'
+dna = '__blog_core'
+id = '__blog_core'
 
 [instances.storage]
 type = 'memory'
 
 [[interfaces]]
-admin = true
-id = 'websocket-interface'
+admin = false
+choose_free_port = false
+id = 'blog_core_ui'
 
 [[interfaces.instances]]
-id = 'test-instance'
+alias = 'test-instance'
+id = '__blog_core'
 
 [interfaces.driver]
-port = 8888
+port = 50000
 type = 'websocket'
+
+[[ui_bundles]]
+id = 'blog_core_ui'
+root_dir = '../blog_gui'
+
+[[ui_interfaces]]
+bind_address = '127.0.0.1'
+bundle = 'blog_core_ui'
+dna_interface = 'blog_core_ui'
+id = 'blog_core_ui'
+port = 8888
+reroute_to_root = false
 
 [logger]
 state_dump = true
